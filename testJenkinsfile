@@ -11,12 +11,12 @@ pipeline{
                 
             }
         }
-        stage(name: 'dep package'){
+        stage('dep package'){
             steps{
                 sh 'npm pack' 
             }
         }
-        stage(name: 'upload artifact'){
+        stage('upload artifact'){
             steps{
                 sh 'curl -uadmin:AP6Q75MQXFQHggFWzUUVfo8HfEy -T \
                 *.tgz \
