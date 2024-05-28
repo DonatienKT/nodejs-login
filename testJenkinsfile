@@ -14,6 +14,7 @@ pipeline{
         }
         stage('dep package'){
             steps{
+                sh 'rm -rf *.tgz || echo ""'
                 sh 'npm pack' 
             }
         }
